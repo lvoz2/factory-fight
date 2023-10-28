@@ -21,3 +21,6 @@ function appendChunks(chunkList) {
 		$("head").append(elem);
 	}
 }
+
+import stateUtils from "https://lvoz2.github.io/pvp-factory/modules/stateTransferUtils.mjs"
+stateUtils.save("test", {test: 0})
