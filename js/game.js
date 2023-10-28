@@ -4,7 +4,7 @@ $(function () {
 });
 
 function appendChunks(chunkList) {
-	for (chunk of chunkList) {
+	for (const chunk of chunkList) {
 		let elem = "";
 		const type = chunk.slice(chunk.lastIndexOf("."));
 		switch (type) {
