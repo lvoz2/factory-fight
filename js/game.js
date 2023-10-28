@@ -15,7 +15,7 @@ function appendChunks(chunkList) {
 				elem = "<script src=\"" + chunk + "\"></script>";
 				break;
 			case ".mjs":
-				elem = "<script src=\"" + chunk + "\" type=\"module\"></script";
+				elem = "<script src=\"" + chunk + "\" type=\"module\"></script>";
 				break;
 		}
 		$("head").append(elem);
