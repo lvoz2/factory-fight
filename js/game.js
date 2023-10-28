@@ -1,15 +1,20 @@
 $(function () {
 	const fileList = [];
-	for (file of fileList) {
+	appendChunks(fileList)
+});
+
+function appendChunks(chunkList) {
+	for (chunk of chunkList) {
 		let elem = "";
-		const type = file.slice(file.lastIndexOf("."));
+		const type = chunk.slice(chunk.lastIndexOf("."));
 		switch (type) {
 			case ".css":
-				elem = "<link rel=\"stylesheet\" href=\"" + file "\"></link>";
+				elem = "<link rel=\"stylesheet\" href=\"" + chunk "\"></link>";
 			case ".js":
-				elem = "<script src=\"" + file "\"></script>";
+				elem = "<script src=\"" + chunk "\"></script>";
 			case ".mjs":
-				elem = "<script src=\"" + file "\" type=\"module\"></script";
+				elem = "<script src=\"" + chunk "\" type=\"module\"></script";
+		}
 		$("head").append(elem);
 	}
-});
+}
