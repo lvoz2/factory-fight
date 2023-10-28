@@ -1,5 +1,5 @@
 $(function () {
-	const fileList = [];
+	const fileList = ["modules/stateTransferUtils.mjs"];
 	appendChunks(fileList)
 });
 
