@@ -12,5 +12,5 @@ export function send(state) {
 	// TODO: Send state to server and parse response.
 }
 
-const package = {save, load, send};
-export default package;
+const pkg = {save, load, send};
+export default pkg;
