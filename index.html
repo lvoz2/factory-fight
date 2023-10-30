@@ -20,10 +20,15 @@
 			margin-left: 75vw;
 		}
 	</style>
+	<script>
+		function resizeSplashImage() {
+			$("#startPage img").attr("width", document.body.clientWidth).attr("height", document.body.clientHeight);
+		}
+	</script>
 </head>
 <body>
 	<div id="startPage">
-		<!-- <img src="graphics/startBackground.png"></img> -->
+		<img src="graphics/startBackground.png"></img>
 		<div id="sideBar">
 			<h1>PvP Factory</h1>
 			<button>Start</button>
