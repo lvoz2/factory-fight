@@ -2,11 +2,6 @@
 <html>
 <head>
 	<title>PvP Factory (WIP)</title>
-	<script>
-		function resizeSplashImage() {
-			$("#startPage img").attr("width", document.body.clientWidth).attr("height", document.body.clientHeight);
-		}
-	</script>
 	<script src="/jquery-3.6.1.min.js" onload="resizeSplashImage()"></script>
 	<script src="js/game.js" type="module"></script>
 	<link rel="stylesheet" href="css/main.css"></link>
@@ -29,6 +24,11 @@
 			z-index: 1;
 		}
 	</style>
+	<script>
+		$(() => {
+			$("#startPage img").attr("width", document.body.clientWidth).attr("height", document.body.clientHeight);
+		});
+	</script>
 </head>
 <body>
 	<div id="startPage">
