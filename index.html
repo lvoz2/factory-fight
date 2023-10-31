@@ -16,18 +16,17 @@
 			position: absolute;
 			width: 100vw;
 			height: 100vh;
+			/*display: grid;
+			grid-template-columns: 75vw 25vw;*/
 		}
 		#sideBar {
-			width: 25vw;
-			margin-left: 75vw;
-			z-index: 2;
+			width: 20vw;
+			float: right;
+			padding: 5vw;
 			position: absolute;
-			height: 100vh;
+			height: 90vh;
 			background-color: rgba(0, 0, 0, 0.5);
-		}
-		#startPage img {
-			z-index: 1;
-			position: absolute;
+			
 		}
 	</style>
 	<script>
@@ -38,7 +37,7 @@
 </head>
 <body>
 	<div id="startPage">
-		<!--  <img src="graphics/startBackground.png"></img>  !-->
+		<div></div>
 		<div id="sideBar">
 			<h1>PvP Factory</h1>
 			<button>Start</button>
