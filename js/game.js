@@ -1,5 +1,5 @@
 $(function () {
-	const fileList = ["js/stateTransferUtils.mjs", "http://joeiddon.github.io/perlin/perlin.js", "js/MapManipulation.mjs"];
+	const fileList = ["js/stateTransferUtils.mjs", "http://joeiddon.github.io/perlin/perlin.js", "js/mapManipulation.mjs"];
 	appendChunks(fileList)
 });
 
@@ -22,5 +22,9 @@ function appendChunks(chunkList) {
 	}
 }
 
-import stateUtils from "https://lvoz2.github.io/pvp-factory/modules/stateTransferUtils.mjs"
-stateUtils.save("test", {test: 0})
+window.gameModules = {};
+
+import stateUtils from "https://lvoz2.github.io/pvp-factory/modules/stateTransferUtils.mjs";
+gameModules.stateUtils = stateUtils;
+import mapManipulation from "https://lvoz2.github.io/pvp-factory/modules/mapManipulation.mjs";
+gameModules.mapManipulation = mapManipulation;
