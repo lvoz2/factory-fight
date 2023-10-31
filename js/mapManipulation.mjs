@@ -1,10 +1,10 @@
 function generate(x, y) {
-	perlin.seed();
+	let noise = new Noise(Math.random());
 	let map = [];
 	for (let curY = 0; curY < y; curY++) {
 		map.push([]);
 		for (let curX = 0; curX < x; curX++) {
-			const perlinVal = perlin.get(curX, curY);
+			const perlinVal = noise.simplex2(curX, curY);
 			console.log(perlinVal);
 			const texture = Math.floor(Math.random() * 5) + (perlinVal * 5);
 			map[curY].push(texture);
