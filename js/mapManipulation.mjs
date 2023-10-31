@@ -6,7 +6,7 @@ function generate(x, y) {
 		for (let curX = 0; curX < x; curX++) {
 			const perlinVal = perlin.get(curX, curY) + 1;
 			const texture = Math.floor(Math.random() * 5) + (perlinVal * 5);
-			map[curY.push(texture);
+			map[curY].push(texture);
 		}
 	}
 	return map;
