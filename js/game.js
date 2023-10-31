@@ -1,5 +1,5 @@
 $(function () {
-	const fileList = ["modules/stateTransferUtils.mjs"];
+	const fileList = ["modules/stateTransferUtils.mjs", "http://joeiddon.github.io/perlin/perlin.js"];
 	appendChunks(fileList)
 });
 
