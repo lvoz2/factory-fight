@@ -24,7 +24,7 @@ function appendChunks(chunkList) {
 
 window.gameModules = {};
 
-import stateUtils from "https://lvoz2.github.io/pvp-factory/modules/stateTransferUtils.mjs";
+import stateUtils from "https://lvoz2.github.io/pvp-factory/js/stateTransferUtils.mjs";
 gameModules.stateUtils = stateUtils;
-import mapManipulation from "https://lvoz2.github.io/pvp-factory/modules/mapManipulation.mjs";
+import mapManipulation from "https://lvoz2.github.io/pvp-factory/js/mapManipulation.mjs";
 gameModules.mapManipulation = mapManipulation;
