@@ -1,5 +1,5 @@
 $(function () {
-	const fileList = ["js/stateTransferUtils.mjs", "https://joeiddon.github.io/perlin/perlin.js", "js/mapManipulation.mjs"];
+	const fileList = ["js/stateTransferUtils.mjs", "https://joeiddon.github.io/perlin/perlin.js", "js/mapManipulation.mjs", "js/noise.js"];
 	appendChunks(fileList)
 });
 
