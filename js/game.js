@@ -1,5 +1,8 @@
+import stateUtils from "https://lvoz2.github.io/pvp-factory/js/stateTransferUtils.mjs";
+import mapManipulation from "https://lvoz2.github.io/pvp-factory/js/mapManipulation.mjs";
+
 $(function () {
-	const fileList = ["js/noise.js", "js/stateTransferUtils.mjs", "js/mapManipulation.mjs"];
+	const fileList = ["js/noise.js"];
 	appendChunks(fileList)
 });
 
@@ -15,16 +18,9 @@ function appendChunks(chunkList) {
 				elem = "<script src=\"" + chunk + "\"></script>";
 				break;
 			case ".mjs":
-				elem = "<script src=\"" + chunk + "\" type=\"module\"></script>";
+				console.warn("Use a JavaScript import statement instead of loading via HTML. Link is " + chunk);
 				break;
 		}
 		$("head").append(elem);
 	}
 }
-
-window.gameModules = {};
-
-import stateUtils from "https://lvoz2.github.io/pvp-factory/js/stateTransferUtils.mjs";
-gameModules.stateUtils = stateUtils;
-import mapManipulation from "https://lvoz2.github.io/pvp-factory/js/mapManipulation.mjs";
-gameModules.mapManipulation = mapManipulation;
