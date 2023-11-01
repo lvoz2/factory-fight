@@ -12,5 +12,21 @@ function generate(x, y) {
 	return map;
 }
 
-const pkg = {generate};
+function render(ctx, map, assets) {
+	const renderedCellSize = 100;
+	for (const subMap of map) {
+		for (let y = 0; y < subMap.length; y++) {
+			for (let x = 0; x < subMap[y].length; x++) {
+				const coords = [x * renderedCellSize, y * renderedCellSize];
+				const cell = subMap[y][x];
+				const img = assets[cell];
+				ctx.drawImage(img, coords[0], coords[1], 100, 100);
+			}
+		}
+	}
+}
+
+let map = []
+
+const pkg = {map, generate, render};
 export default pkg;
