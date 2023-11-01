@@ -4,8 +4,7 @@ function generate(x, y) {
 	for (let curY = 0; curY < y; curY++) {
 		map.push([]);
 		for (let curX = 0; curX < x; curX++) {
-			const perlinVal = noise.simplex2(curX, curY);
-			console.log(perlinVal);
+			const perlinVal = noise.simplex2(curX, curY) + 1;
 			const texture = Math.floor(Math.random() * 5) + Math.floor(perlinVal * 5);
 			map[curY].push(texture);
 		}
