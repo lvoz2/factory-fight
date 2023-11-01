@@ -10,15 +10,15 @@
 			margin: 0;
 			height: 100vh;
 			width: 100vw;
-			background-image: url("Graphic/Menu_Background.png");
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
 		}
 		#startPage {
 			position: absolute;
 			width: 80vw;
 			height: 100vh;
+			background-image: url("Graphic/Menu_Background.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		#sideBar {
 			padding: 5vh 5vw;
@@ -28,6 +28,16 @@
 			background-color: rgba(0, 0, 0, 0.4);
 			width: 90vw;
 		}
+		.hidden {
+			display: none;
+			visibility: hidden;
+			opacity: 0;
+		}
+		.visible {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+		}
 	</style>
 	<script>
 		$(() => {
@@ -36,12 +46,14 @@
 	</script>
 </head>
 <body>
-	<div id="startPage">
-		<div></div>
+	<div id="startPage" class="menu visible">
 		<div id="sideBar">
-			<h1>PvP Factory</h1>
+			<h1>Factory Fight</h1>
 			<button>Start</button>
 		</div>
+	</div>
+	<div id="" class="menu hidden">
+		<canvas id="canvas"></canvas>
 	</div>
 </body>
 </html>
