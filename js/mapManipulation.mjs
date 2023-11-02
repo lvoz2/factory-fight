@@ -13,20 +13,33 @@ function generate(x, y) {
 }
 
 function render(ctx, map, assets) {
-	const renderedCellSize = 100;
+	const renderedCellSize = (() => {
+		const height = ctx.canvas.height / 16;
+		const width = ctx.canvas.width / 9;
+		return (height > width) ? width : height;
+	});
 	for (const subMap of map) {
 		for (let y = 0; y < subMap.length; y++) {
 			for (let x = 0; x < subMap[y].length; x++) {
 				const coords = [x * renderedCellSize, y * renderedCellSize];
 				const cell = subMap[y][x];
-				const img = assets[cell];
-				ctx.drawImage(img, coords[0], coords[1], 100, 100);
+				const asset = assets[cell];
+				const width = renderedCellSize * asset.width;
+				const height = enderedCellSize * asset.height;
+				ctx.drawImage(asset.img, coords[0], coords[1], width, height);
 			}
 		}
 	}
 }
 
-let map = []
+class Asset {
+	constructor(url) {
+		this.img = new Image();
+		this.img.src = url;
+		this.height = this.img.height;
+		this.width = this.img.width;
+	}
+}
 
-const pkg = {map, generate, render};
+const pkg = {generate, render, Asset};
 export default pkg;
