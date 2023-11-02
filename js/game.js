@@ -1,5 +1,4 @@
-import stateUtils from "https://lvoz2.github.io/pvp-factory/js/stateTransferUtils.mjs";
-import mapManipulation from "https://lvoz2.github.io/pvp-factory/js/mapManipulation.mjs";
+import modules from "https://lvoz2.github.io/pvp-factory/js/moduleAggregate.mjs";
 
 $(function () {
 	const fileList = ["js/noise.js"];
