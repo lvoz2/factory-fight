@@ -41,9 +41,13 @@
 		}
 	</style>
 </head>
-<body>
+<body onload="initialiseServer();">
 	<div id="startPage" class="menu visible">
-		<div id="titlePage" class="sideBar page">
+		<div id="loading" class="sideBar page">
+			<h1>Factory Fight</h1>
+			<h2>Initialising Server Connection...</h2>
+		</div>
+		<div id="titlePage" class="sideBar page" style="display:none">
 			<h1>Factory Fight</h1>
 			<button onclick="show("playerNameForm")">Start</button>
 		</div>
@@ -53,6 +57,13 @@
 			<input type="text" id="nameInput" placeholder="Username"></input>
 			<button onclick="sendPlayerName()">Join a game</button>
 			<button onclick="backToStart()">Back</button>
+		</div>
+		<div id="success" class="sideBar page" style="display:none">
+			<h2>Connected!</h2>
+			<p id="playerNameParagraph"></p>
+		</div>
+		<div id="errorPage" class="sideBar page" style="display:none">
+			<h2 id="errorText">An unknown error occured</h2>
 		</div>
 	</div>
 	<div id="gamePage" class="menu hidden">
