@@ -43,15 +43,15 @@
 </head>
 <body>
 	<div id="startPage" class="menu visible">
-		<div class="sideBar visible">
+		<div id="titlePage" class="sideBar page">
 			<h1>Factory Fight</h1>
-			<button onclick="swapToNameMenu()">Start</button>
+			<button onclick="show("playerNameForm")">Start</button>
 		</div>
-		<div class="sideBar hidden">
+		<div id="playerNameForm" class="sideBar page" style="display:none">
 			<h1>Factory Fight</h1>
 			<label for="nameInput">Enter a username: </label>
 			<input type="text" id="nameInput" placeholder="Username"></input>
-			<button onclick="start()">Join a game</button>
+			<button onclick="sendPlayerName()">Join a game</button>
 			<button onclick="backToStart()">Back</button>
 		</div>
 	</div>
