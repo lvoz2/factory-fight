@@ -20,7 +20,7 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-		#sideBar {
+		.sideBar {
 			padding: 5vh 5vw;
 			margin-top: 75vh; 
 			height: 15vh;
@@ -42,9 +42,16 @@
 </head>
 <body>
 	<div id="startPage" class="menu visible">
-		<div id="sideBar">
+		<div class="sideBar visible">
 			<h1>Factory Fight</h1>
 			<button onclick="swapToNameMenu()">Start</button>
+		</div>
+		<div class="sideBar hidden">
+			<h1>Factory Fight</h1>
+			<label for="nameInput">Enter a username: </label>
+			<input type="text" id="nameInput" placeholder="Username"></input>
+			<button onclick="start()">Join a game</button>
+			<button onclick="backToStart()">Back</button>
 		</div>
 	</div>
 	<div id="gamePage" class="menu hidden">
