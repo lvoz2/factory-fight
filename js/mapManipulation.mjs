@@ -1,4 +1,4 @@
-function generate(x, y) {
+export function generate(x, y) {
 	let noise = new Noise(Math.random());
 	let map = [];
 	for (let curY = 0; curY < y; curY++) {
@@ -12,7 +12,7 @@ function generate(x, y) {
 	return map;
 }
 
-function render(ctx, map, assets) {
+export function render(ctx, map, assets) {
 	const renderedCellSize = (() => {
 		const height = ctx.canvas.height / 16;
 		const width = ctx.canvas.width / 9;
@@ -32,7 +32,7 @@ function render(ctx, map, assets) {
 	}
 }
 
-class Asset {
+export class Asset {
 	constructor(url) {
 		this.img = new Image();
 		this.img.src = url;
