@@ -1,4 +1,4 @@
-// API URL (ensure not to include "/" at end
+// API URL (ensure not to include "/" at end)
 const url = "http://localhost:3000"
 
 // Establishing initial connection with server and seeing if there are any player slots available
