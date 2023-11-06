@@ -67,3 +67,6 @@ function show(showPage) {
 	// Make requested div visible after all others have been hidden
 	$("#" + showPage).addClass("visible").removeClass("hidden");
 }
+
+const pkg = {initialiseServer, sendPlayername, show};
+export default pkg;
