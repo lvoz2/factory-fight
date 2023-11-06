@@ -1,6 +1,7 @@
 import modules from "https://lvoz2.github.io/factory-fight/js/moduleAggregate.mjs";
 
 $(function () {
+	console.log(modules);
 	modules.initialiseServer();
 	const fileList = ["js/noise.js"];
 	appendChunks(fileList);
