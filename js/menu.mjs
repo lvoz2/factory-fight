@@ -68,5 +68,5 @@ export function show(showPage) {
 	$("#" + showPage).addClass("visible").removeClass("hidden");
 }
 
-const pkg = {initialiseServer, sendPlayername, show};
+const pkg = {initialiseServer, sendPlayerName, show};
 export default pkg;
