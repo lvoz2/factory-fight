@@ -7,6 +7,7 @@ function returnContents(obj) {
 	for (const key in obj) {
 		res.push(obj[key]);
 	}
+	return res;
 }
 
 const pkg = {menu, stateUtils, mapManipulation, ...returnContents(stateUtils), ...returnContents(mapManipulation), ...returnContents(menu)};
