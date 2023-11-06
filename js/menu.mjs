@@ -2,7 +2,7 @@
 const url = "http://localhost:3000"
 
 // Establishing initial connection with server and seeing if there are any player slots available
-function initialiseServer() {
+export function initialiseServer() {
 	// Send a ping to server and receive a response
 	fetch(url + "/initialise", {method: "POST", body: JSON.stringify({"ping": "true"})}).then((res) => {
 		// If the response is okay, put response into variable
@@ -30,7 +30,7 @@ function initialiseServer() {
 }
 
 // Sends player name to server, and receives a response confirming the input was successful
-function sendPlayerName() {
+export function sendPlayerName() {
 	// Put player name text box input into variable
 	var playerName = $("#nameInput").val();
 	// Send player name to server and receive JSON in return
@@ -61,7 +61,7 @@ function sendPlayerName() {
 }
 
 // Changes visibility of div's based on function parameters
-function show(showPage) {
+export function show(showPage) {
 	// Records all div's that need to be hidden, under class name 'page'
 	$(".page").addClass("hidden").removeClass("visible");
 	// Make requested div visible after all others have been hidden
