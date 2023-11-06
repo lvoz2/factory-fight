@@ -1,4 +1,4 @@
-import modules from "https://lvoz2.github.io/pvp-factory/js/moduleAggregate.mjs";
+import modules from "https://lvoz2.github.io/factory=fight/js/moduleAggregate.mjs";
 
 $(function () {
 	const fileList = ["js/noise.js"];
