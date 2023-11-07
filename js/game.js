@@ -23,7 +23,7 @@ function loadAssets(assetList) {
 
 $(document).on("playerNameSent", ((e) => {
 	modules.startRender(canvas.getContext("2d"), modules.generate(10, 10), assets);
-});
+}));
 
 function appendChunks(chunkList) {
 	for (const chunk of chunkList) {
