@@ -6,6 +6,7 @@ $(function () {
 	const fileList = ["js/noise.js"];
 	appendChunks(fileList);
 	window.show = modules.show;
+	window.modules = modules;
 });
 
 function appendChunks(chunkList) {
