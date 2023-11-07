@@ -12,7 +12,31 @@ export function generate(x, y) {
 	return map;
 }
 
-export function render(ctx, map, assets) {
+let ctx, map, assets;
+
+export function startRender(initialCtx, initialMap, initialAssets) {
+	ctx = initialCtx;
+	map = initialMap;
+	assets = initialAssets;
+	requestAnimationFrame(render);
+}
+
+export let deltas = [];
+let times = [];
+
+export function render(time) {
+	times.unshift(time);
+	if (deltas.length == 0) {
+		deltas.unshift(0)
+	} else {
+		deltas.unshift(time - times[1])
+	}
+	if (deltas.length > 10) {
+		deltas.length = 10;
+	}
+	if (times.length > 10) {
+		times.length = 10;
+	}
 	const renderedCellSize = (() => {
 		const height = ctx.canvas.height / 16;
 		const width = ctx.canvas.width / 9;
@@ -30,6 +54,7 @@ export function render(ctx, map, assets) {
 			}
 		}
 	}
+	requestAnimationFrame(render);
 }
 
 export class Asset {
@@ -41,5 +66,5 @@ export class Asset {
 	}
 }
 
-const pkg = {generate, render, Asset};
+const pkg = {generate, render, Asset, deltas};
 export default pkg;
