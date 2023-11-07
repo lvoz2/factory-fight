@@ -1,5 +1,7 @@
 // API URL (ensure not to include "/" at end)
 const url = "http://localhost:3000"
+// Security key storage
+const securityKey;
 
 // Establishing initial connection with server and seeing if there are any player slots available
 export function initialiseServer() {
@@ -13,6 +15,7 @@ export function initialiseServer() {
 				// If the response fulfils criteria and lobby has available player slots, show player name input form
 				if (reqJsonInit.pong == "true" && reqJsonInit.lobby == "available") {
 					show("titlePage");
+					securityKey = reqJsonInit.securityKey;
 				}
 				// Else if response fulfils criteria but lobby is full, show error page showing server full
 				else if (reqJsonInit.pong == "true" && reqJsonInit.lobby == "full") {
