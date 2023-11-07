@@ -41,7 +41,7 @@ export function render(time) {
 		const height = ctx.canvas.height / 16;
 		const width = ctx.canvas.width / 9;
 		return (height > width) ? width : height;
-	});
+	})();
 	for (const subMap of map) {
 		for (let y = 0; y < subMap.length; y++) {
 			for (let x = 0; x < subMap[y].length; x++) {
