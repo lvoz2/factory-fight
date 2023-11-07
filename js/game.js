@@ -8,6 +8,7 @@ $(function () {
 	const assetList = ["./Graphic/Background_Tiles/Tile_Dirt_1.png", "./Graphic/Background_Tiles/Tile_Dirt_2.png", "./Graphic/Background_Tiles/Tile_Dirt_3.png"];
 	appendChunks(fileList);
 	assets = loadAssets(assetList);
+	window.canvas = $("canvas")[0];
 	window.show = modules.show;
 	window.modules = modules;
 });
