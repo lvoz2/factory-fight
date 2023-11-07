@@ -38,8 +38,8 @@ export function render(time) {
 		times.length = 10;
 	}
 	const renderedCellSize = (() => {
-		const height = ctx.canvas.height / 16;
-		const width = ctx.canvas.width / 9;
+		const height = ctx.canvas.clientHeight / 16;
+		const width = ctx.canvas.clientWidth / 9;
 		return (height > width) ? width : height;
 	})();
 	for (const subMap of map) {
@@ -48,8 +48,8 @@ export function render(time) {
 				const coords = [x * renderedCellSize, y * renderedCellSize];
 				const cell = subMap[y][x];
 				const asset = assets[cell];
-				const width = renderedCellSize * asset.width;
-				const height = renderedCellSize * asset.height;
+				const width = renderedCellSize;
+				const height = renderedCellSize;
 				ctx.drawImage(asset.img, coords[0], coords[1], width, height);
 			}
 		}
