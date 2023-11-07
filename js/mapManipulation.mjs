@@ -60,9 +60,11 @@ export function render(time) {
 export class Asset {
 	constructor(url) {
 		this.img = new Image();
+		this.img.onload = ((e) => {
+			this.height = e.target.height;
+			this.width = e.target.width;
+		});
 		this.img.src = url;
-		this.height = this.img.height;
-		this.width = this.img.width;
 	}
 }
 
