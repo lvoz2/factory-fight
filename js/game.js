@@ -3,7 +3,7 @@ import modules from "https://lvoz2.github.io/factory-fight/js/moduleAggregate.mj
 $(function () {
 	modules.initialiseServer();
 	const fileList = ["js/noise.js"];
-	const assetList = ["./Graphic/Background_Tiles/Tile_Dirt_1.png", "./Graphic/Background_Tiles/Tile_Dirt_2.png", "./Graphic/Background_Tiles/Tile_Dirt_3.png"];
+	const assetList = ["./Graphic/Background_Tiles/Tile_Dirt_1.png", "./Graphic/Background_Tiles/Tile_Dirt_2.png", "./Graphic/Background_Tiles/Tile_Dirt_3.png", "./Graphic/Background_Tiles/Tile_Dirt_4.png", "./Graphic/Background_Tiles/Tile_Dirt_5.png", "./Graphic/Background_Tiles/Tile_Grass_1.png", "./Graphic/Background_Tiles/Tile_Grass_2.png", "./Graphic/Background_Tiles/Tile_Grass_3.png", "./Graphic/Background_Tiles/Tile_Grass_4.png", "./Graphic/Background_Tiles/Tile_Grass_5.png", "./Graphic/Background_Tiles/Tile_Sand_1.png", "./Graphic/Background_Tiles/Tile_Sand_2.png", "./Graphic/Background_Tiles/Tile_Sand_3.png", "./Graphic/Background_Tiles/Tile_Sand_4.png", "./Graphic/Background_Tiles/Tile_Sand_5.png", "./Graphic/Background_Tiles/Tile_Stone_1.png", "./Graphic/Background_Tiles/Tile_Stone_2.png", "./Graphic/Background_Tiles/Tile_Stone_3.png", "./Graphic/Background_Tiles/Tile_Stone_4.png", "./Graphic/Background_Tiles/Tile_Stone_5.png"];
 	appendChunks(fileList);
 	window.assets = loadAssets(assetList);
 	window.canvas = $("canvas")[0];
