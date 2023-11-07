@@ -1,13 +1,21 @@
 import modules from "https://lvoz2.github.io/factory-fight/js/moduleAggregate.mjs";
 
 $(function () {
-	console.log(modules);
 	modules.initialiseServer();
 	const fileList = ["js/noise.js"];
+	const assetList = ["./Graphic/Background_Tiles/Tile_Dirt_1.png", "./Graphic/Background_Tiles/Tile_Dirt_2.png", "./Graphic/Background_Tiles/Tile_Dirt_3.png"];
 	appendChunks(fileList);
+	loadAssets(assetList);
 	window.show = modules.show;
 	window.modules = modules;
 });
+
+function loadAssets(assetList) {
+	let assets = [];
+	for (const asset of assetList) {
+		assets.push(new modules.Asset(asset));
+	}
+}
 
 function appendChunks(chunkList) {
 	for (const chunk of chunkList) {
