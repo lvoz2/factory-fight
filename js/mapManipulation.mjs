@@ -49,7 +49,7 @@ export function render(time) {
 				const cell = subMap[y][x];
 				const asset = assets[cell];
 				const width = renderedCellSize * asset.width;
-				const height = enderedCellSize * asset.height;
+				const height = renderedCellSize * asset.height;
 				ctx.drawImage(asset.img, coords[0], coords[1], width, height);
 			}
 		}
