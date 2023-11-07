@@ -43,6 +43,7 @@ export function sendPlayerName() {
 				// If the player name was successfully added to player list, state success.
 				if (reqJsonPlayerName.success == true) {
 					$("#playerNameParagraph").text("Player Name: "+ reqJsonPlayerName.playerName);
+					document.dispatchEvent(new Event("playerNameSent"));
 					show("success");
 				}
 				// Else if success failed, stating error page as name is already likely being used
