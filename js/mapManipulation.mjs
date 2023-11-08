@@ -39,8 +39,8 @@ export function render(time) {
 		times.length = 10;
 	}
 	const renderedCellSize = (() => {
-		const height = ctx.canvas.clientHeight / 16;
-		const width = ctx.canvas.clientWidth / 9;
+		const height = ctx.canvas.clientHeight / 9;
+		const width = ctx.canvas.clientWidth / 16;
 		return (height > width) ? width : height;
 	})();
 	for (const subMap of map) {
