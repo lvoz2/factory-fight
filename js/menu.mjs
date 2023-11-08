@@ -65,11 +65,11 @@ export function sendPlayerName() {
 }
 
 // Changes visibility of div's based on function parameters
-export function show(showPage) {
+export function show(id, group = "page") {
 	// Records all div's that need to be hidden, under class name 'page'
-	$(".page").addClass("hidden").removeClass("visible");
+	$("." + group).addClass("hidden").removeClass("visible");
 	// Make requested div visible after all others have been hidden
-	$("#" + showPage).addClass("visible").removeClass("hidden");
+	$("#" + id).addClass("visible").removeClass("hidden");
 }
 
 const pkg = {initialiseServer, sendPlayerName, show};
