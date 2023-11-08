@@ -19,6 +19,11 @@ function loadAssets(assetList) {
 	return assets;
 }
 
+$(window).on("resize", ((e) => {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+}));
+
 $(document).on("playerNameSent", ((e) => {
 	modules.startRender(canvas.getContext("2d"), [modules.generate(10, 10)], assets);
 }));
