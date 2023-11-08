@@ -1,7 +1,7 @@
 // API URL (ensure not to include "/" at end)
 const url = "http://localhost:3000"
 // Security key storage
-const securityKey;
+// const securityKey;
 
 // Establishing initial connection with server and seeing if there are any player slots available
 export function initialiseServer() {
