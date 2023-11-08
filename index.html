@@ -56,7 +56,7 @@
 			<h1>Factory Fight</h1>
 			<label for="nameInput">Enter a username: </label>
 			<input type="text" id="nameInput" placeholder="Username"></input>
-			<button onclick="modules.sendPlayerName();">Join a game</button>
+			<button onclick="document.dispatchEvent(new Event('playerNameSent')); //modules.sendPlayerName();">Join a game</button>
 			<button onclick="show('titlePage');">Back</button>
 		</div>
 		<div id="success" class="sideBar page hidden">
