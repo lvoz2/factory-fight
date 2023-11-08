@@ -23,6 +23,7 @@ export function startRender(initialCtx, initialMap, initialAssets) {
 
 export let deltas = [];
 let times = [];
+export let renderStats = ["", "", "", "", "", "", "", "", "", ""];
 
 export function render(time) {
 	times.unshift(time);
@@ -50,6 +51,8 @@ export function render(time) {
 				const asset = assets[cell];
 				const width = renderedCellSize;
 				const height = renderedCellSize;
+				renderStats.unshift({coords: coords, cell: cell, asset: asset, width: width, height: height});
+				renderStats.length = 10;
 				ctx.drawImage(asset.img, coords[0], coords[1], width, height);
 			}
 		}
