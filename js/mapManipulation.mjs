@@ -5,7 +5,7 @@ export function generate(x, y) {
 		map.push([]);
 		for (let curX = 0; curX < x; curX++) {
 			const perlinVal = noise.simplex2(curX, curY) + 1;
-			const texture = Math.floor(Math.random() * 5) + Math.floor(perlinVal * 10);
+			const texture = Math.floor(Math.random() * 5) + Math.floor(perlinVal * 7.5);
 			map[curY].push(texture);
 		}
 	}
