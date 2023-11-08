@@ -71,5 +71,5 @@ export class Asset {
 	}
 }
 
-const pkg = {generate, startRender, Asset, deltas, render};
+const pkg = {generate, startRender, Asset, deltas, render, renderStats};
 export default pkg;
