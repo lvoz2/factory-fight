@@ -26,6 +26,9 @@ $(window).on("resize", ((e) => {
 
 $(document).on("playerNameSent", ((e) => {
 	modules.startRender(canvas.getContext("2d"), [modules.generate(10, 10)], assets);
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+	show("gamePage", "menu");
 }));
 
 function appendChunks(chunkList) {
