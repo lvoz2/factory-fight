@@ -43,7 +43,14 @@ export function render(time) {
 		const width = ctx.canvas.clientWidth / ratio.x;
 		return (height > width) ? width : height;
 	})();
-	for (const subMap of map) {
+	for (let subMap of map) {
+		subMap = (() => {
+			let chunk = [];
+			for (let y = loc.y; y <= (loc.y + ratio.y); y++) {
+				chunk.append(subMap[y].slice(loc.x, loc.x + ratio.x + 1));
+			}
+			return chunk;
+		})();
 		for (let y = 0; y < subMap.length; y++) {
 			for (let x = 0; x < subMap[y].length; x++) {
 				const coords = [x * renderedCellSize, y * renderedCellSize];
