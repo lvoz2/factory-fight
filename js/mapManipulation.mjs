@@ -55,18 +55,18 @@ let loc = {x: 0, y: 0};
 
 let ctx, map, assets;
 
-export function startRender(initialCtx, initialMap, initialAssets) {
+export function startRender(initialCtx, initialMap, initialAssets, animate) {
 	ctx = initialCtx;
 	map = initialMap;
 	assets = initialAssets;
-	requestAnimationFrame(render);
+	if (animate) {requestAnimationFrame(render);}
 }
 
 export let deltas = [];
 let times = [];
 export let renderStats = ["", "", "", "", "", "", "", "", "", ""];
 
-export function render(time) {
+export function render(time, animate = true) {
 	times.unshift(time);
 	if (deltas.length == 0) {
 		deltas.unshift(0)
@@ -107,7 +107,7 @@ export function render(time) {
 			}
 		}
 	}
-	requestAnimationFrame(render);
+	if (animate) {requestAnimationFrame(render);}
 }
 
 export class Asset {
