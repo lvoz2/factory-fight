@@ -82,5 +82,5 @@ export class Asset {
 
 let ratio = {x: 32, y: 18};
 
-const pkg = {ratio, generate, startRender, Asset, deltas, render, renderStats};
+const pkg = {loc, ratio, generate, startRender, Asset, deltas, render, renderStats};
 export default pkg;
