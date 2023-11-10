@@ -21,13 +21,13 @@ function loadAssets(assetList) {
 
 $(window).on("resize", ((e) => {
 	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
+	canvas.height = window.innerHeight * 0.8;
 }));
 
 $(document).on("playerNameSent", ((e) => {
 	modules.startRender(canvas.getContext("2d"), [modules.generate(80, 40)], assets);
 	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
+	canvas.height = window.innerHeight * 0.8;
 	show("gamePage", "menu");
 }));
 
