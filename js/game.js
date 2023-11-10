@@ -5,7 +5,7 @@ $(function () {
 	const fileList = ["js/noise.js"];
 	const assetList = [
 		["./Graphic/empty.png", "./Graphic/Background_Tiles/Tile_Dirt_1.png", "./Graphic/Background_Tiles/Tile_Dirt_2.png", "./Graphic/Background_Tiles/Tile_Dirt_3.png", "./Graphic/Background_Tiles/Tile_Dirt_4.png", "./Graphic/Background_Tiles/Tile_Dirt_5.png", "./Graphic/Background_Tiles/Tile_Grass_1.png", "./Graphic/Background_Tiles/Tile_Grass_2.png", "./Graphic/Background_Tiles/Tile_Grass_3.png", "./Graphic/Background_Tiles/Tile_Grass_4.png", "./Graphic/Background_Tiles/Tile_Grass_5.png", "./Graphic/Background_Tiles/Tile_Sand_1.png", "./Graphic/Background_Tiles/Tile_Sand_2.png", "./Graphic/Background_Tiles/Tile_Sand_3.png", "./Graphic/Background_Tiles/Tile_Sand_4.png", "./Graphic/Background_Tiles/Tile_Sand_5.png", "./Graphic/Background_Tiles/Tile_Stone_1.png", "./Graphic/Background_Tiles/Tile_Stone_2.png", "./Graphic/Background_Tiles/Tile_Stone_3.png", "./Graphic/Background_Tiles/Tile_Stone_4.png", "./Graphic/Background_Tiles/Tile_Stone_5.png"],
-		["./Graphic/empty.png", "./Graphic/Material_Tile/Tile_ResourceNode_Coal.png", "./Graphic/Material_Tile/Tile_ResourceNode_Copper.png", "./Graphic/Material_Tile/Tile_ResourceNode_Iron.png"]
+		["./Graphic/empty.png", "./Graphic/Material_Tile/Tile_ResourceNode_Iron.png", "./Graphic/Material_Tile/Tile_ResourceNode_Copper.png", "./Graphic/Material_Tile/Tile_ResourceNode_Coal.png"]
 	];
 	appendChunks(fileList);
 	window.assets = loadAssets(assetList);
