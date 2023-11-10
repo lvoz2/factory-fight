@@ -19,7 +19,7 @@ export function generate(x, y) {
 	let oreCount = Math.floor(Math.random() * 20) + 240;
 	while (oreCount > 0) {
 		const type = Math.floor(Math.random() * 2.5);
-		const size = [Math.floor(Math.random() * 8), Math.floor(Math.random() * 8)];
+		const size = [Math.floor(Math.random() * 5) + 7, Math.floor(Math.random() * 5) + 7];
 		let coords = [Math.floor(Math.random() * (201 - size[0])), Math.floor(Math.random() * (101 - size[1]))]
 		let nodeMap = [];
 		for (let curY = 0; curY < size[1]; curY++) {
