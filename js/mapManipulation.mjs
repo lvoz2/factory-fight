@@ -28,7 +28,7 @@ export function generate(x, y) {
 				nodeMap[curY].push(0);
 			}
 		}
-		let nodes = Math.floor(Math.random() * 4) + 8;
+		let nodes = Math.floor(Math.random() * 8) + 36;
 		while (nodes > 0) {
 			const loc = [Math.floor(Math.random() * size[0]), Math.floor(Math.random() * size[1])];
 			if (nodeMap[loc[1]][loc[0]] == 0) {
