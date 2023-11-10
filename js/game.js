@@ -9,6 +9,7 @@ $(function () {
 	window.canvas = $("canvas")[0];
 	window.show = modules.show;
 	window.modules = modules;
+	window.size = [80, 40];
 });
 
 function loadAssets(assetList) {
@@ -25,7 +26,8 @@ $(window).on("resize", ((e) => {
 }));
 
 $(document).on("playerNameSent", ((e) => {
-	modules.startRender(canvas.getContext("2d"), [modules.generate(80, 40)], assets);
+	window.map = [modules.generate(size[0], size[1])];
+	modules.startRender(canvas.getContext("2d"), map, assets);
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight * 0.8;
 	show("gamePage", "menu");
