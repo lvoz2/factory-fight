@@ -49,7 +49,7 @@ export function render(time) {
 		subMap = (() => {
 			let chunk = [];
 			for (let y = loc.y; y <= (loc.y + ratio.y); y++) {
-				chunk.append(subMap[y].slice(loc.x, loc.x + ratio.x + 1));
+				chunk.push(subMap[y].slice(loc.x, loc.x + ratio.x + 1));
 			}
 			return chunk;
 		})();
