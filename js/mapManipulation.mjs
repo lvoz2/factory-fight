@@ -39,8 +39,8 @@ export function render(time) {
 		times.length = 10;
 	}
 	const renderedCellSize = (() => {
-		const height = ctx.canvas.clientHeight / 9;
-		const width = ctx.canvas.clientWidth / 16;
+		const height = ctx.canvas.clientHeight / ratio.y;
+		const width = ctx.canvas.clientWidth / ratio.x;
 		return (height > width) ? width : height;
 	})();
 	for (const subMap of map) {
@@ -71,5 +71,7 @@ export class Asset {
 	}
 }
 
-const pkg = {generate, startRender, Asset, deltas, render, renderStats};
+let ratio = {x: 32, y: 18};
+
+const pkg = {ratio, generate, startRender, Asset, deltas, render, renderStats};
 export default pkg;
