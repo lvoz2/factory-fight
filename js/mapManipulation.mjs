@@ -93,7 +93,7 @@ export function render(time, animate = true) {
 		layer++;
 		subMap = (() => {
 			let chunk = [];
-			for (let y = loc.y; y <= (loc.y + ratio.y); y++) {
+			for (let y = loc.y; y < (loc.y + ratio.y); y++) {
 				chunk.push(subMap[y].slice(loc.x, loc.x + ratio.x + 1));
 			}
 			return chunk;
