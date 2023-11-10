@@ -79,7 +79,9 @@ export function render(time) {
 		const width = ctx.canvas.clientWidth / ratio.x;
 		return (height > width) ? width : height;
 	})();
+	let layer = -1;
 	for (let subMap of map) {
+		layer++;
 		subMap = (() => {
 			let chunk = [];
 			for (let y = loc.y; y <= (loc.y + ratio.y); y++) {
@@ -91,7 +93,7 @@ export function render(time) {
 			for (let x = 0; x < subMap[y].length; x++) {
 				const coords = [x * renderedCellSize, y * renderedCellSize];
 				const cell = subMap[y][x];
-				const asset = assets[cell];
+				const asset = assets[layer][cell];
 				const width = renderedCellSize;
 				const height = renderedCellSize;
 				renderStats.unshift({coords: coords, cell: cell, asset: asset, width: width, height: height});
