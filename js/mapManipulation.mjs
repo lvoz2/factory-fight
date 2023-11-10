@@ -12,6 +12,8 @@ export function generate(x, y) {
 	return map;
 }
 
+let loc = {x: 0, y: 0};
+
 let ctx, map, assets;
 
 export function startRender(initialCtx, initialMap, initialAssets) {
