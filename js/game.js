@@ -17,9 +17,12 @@ $(function () {
 
 function loadAssets(assetList) {
 	let assets = [];
+	let layer = -1;
 	for (const list of assetList) {
+		layer++;
+		assets.push([]);
 		for (const asset of list) {
-			assets.push(new modules.Asset(asset));
+			assets[layer].push(new modules.Asset(asset));
 		}
 	}
 	return assets;
