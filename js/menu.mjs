@@ -37,7 +37,7 @@ export function sendPlayerName() {
 	// Put player name text box input into variable
 	var playerName = $("#nameInput").val();
 	// Send player name to server and receive JSON in return
-	fetch(url + "/newplayer", {method: "POST", body: JSON.stringify({"playerName": playerName})}).then((res) => {
+	fetch(url + "/newplayer", {method: "POST", body: JSON.stringify({"playerName": playerName, "securityKey": securityKey})}).then((res) => {
 		// If response is okay, then put response data into variable
 		if (res.ok) {
 			let reqJsonPlayerName;
