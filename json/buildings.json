@@ -1,5 +1,6 @@
 {
 	"extractor": {
 		// Chuck info about extractors here. After each line, except the last of each indentation level, add a ,
+		"health": 2
 	}
 }
