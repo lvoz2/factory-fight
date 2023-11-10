@@ -38,8 +38,12 @@ export function generate(x, y) {
 			}
 		}
 		for (let i = coords[1]; i < (coords[1] + size[1]); i++) {
-			for (let j = coords[0]; j < (coords[0] + size[0]); j++) {
-				oreMap[i][j] = nodeMap[i - coords[1]][j - coords[0]];
+			if (i < oreMap.length) {
+				for (let j = coords[0]; j < (coords[0] + size[0]); j++) {
+					if (j < oreMap[i].length) {
+						oreMap[i][j] = nodeMap[i - coords[1]][j - coords[0]];
+					}
+				}
 			}
 		}
 	}
