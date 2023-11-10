@@ -1,3 +1,7 @@
+function random(limit) {
+	return Math.floor(Math.random() * limit);
+}
+
 export function generate(x, y) {
 	// let noise = new Noise(Math.random());
 	let map = [];
@@ -5,7 +9,7 @@ export function generate(x, y) {
 		map.push([]);
 		for (let curX = 0; curX < x; curX++) {
 			// const perlinVal = Math.floor(2 * (noise.simplex2(curX, curY) + 1));
-			const texture = 1 + Math.floor(Math.random() * 20); // Math.floor(Math.random() * 5) + Math.floor(perlinVal * 5);
+			const texture = 1 + random(20); // Math.floor(Math.random() * 5) + Math.floor(perlinVal * 5);
 			map[curY].push(texture);
 		}
 	}
@@ -16,11 +20,11 @@ export function generate(x, y) {
 			oreMap[curY].push(0);
 		}
 	}
-	let oreCount = Math.floor(Math.random() * 20) + 240;
+	let oreCount = random(20) + 240;
 	while (oreCount > 0) {
-		const type = Math.floor(Math.random() * 2.5) + 1;
-		const size = [Math.floor(Math.random() * 5) + 7, Math.floor(Math.random() * 5) + 7];
-		let coords = [Math.floor(Math.random() * (201 - size[0])), Math.floor(Math.random() * (101 - size[1]))]
+		const type = random(2.5) + 1;
+		const size = [random(5) + 7, random(5) + 7];
+		let coords = [random(201 - size[0]), random(101 - size[1])]
 		let nodeMap = [];
 		for (let curY = 0; curY < size[1]; curY++) {
 			nodeMap.push([]);
@@ -28,9 +32,9 @@ export function generate(x, y) {
 				nodeMap[curY].push(0);
 			}
 		}
-		let nodes = Math.floor(Math.random() * 8) + 36;
+		let nodes = random(8) + 36;
 		while (nodes > 0) {
-			const loc = [Math.floor(Math.random() * size[0]), Math.floor(Math.random() * size[1])];
+			const loc = [random(size[0]), random(size[1])];
 			if (nodeMap[loc[1]][loc[0]] == 0) {
 				nodeMap[loc[1]][loc[0]] = type;
 				oreCount--;
