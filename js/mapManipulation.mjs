@@ -13,25 +13,13 @@ export function generate(x, y) {
 			map[curY].push(texture);
 		}
 	}
-	let oreMap = [];
-	for (let curY = 0; curY < y; curY++) {
-		oreMap.push([]);
-		for (let curX = 0; curX < x; curX++) {
-			oreMap[curY].push(0);
-		}
-	}
+	let oreMap = Array(y).fill(Array(x).fill(0));
 	let oreCount = random(20) + 240;
 	while (oreCount > 0) {
 		const type = random(2.5) + 1;
 		const size = [random(5) + 7, random(5) + 7];
 		let coords = [random(201 - size[0]), random(101 - size[1])]
-		let nodeMap = [];
-		for (let curY = 0; curY < size[1]; curY++) {
-			nodeMap.push([]);
-			for (let curX = 0; curX < size[0]; curX++) {
-				nodeMap[curY].push(0);
-			}
-		}
+		let nodeMap = Array(size[1]).fill(Array(size[0]).fill(0));
 		let nodes = random(8) + 36;
 		while (nodes > 0) {
 			const loc = [random(size[0]), random(size[1])];
@@ -51,7 +39,10 @@ export function generate(x, y) {
 			}
 		}
 	}
-	map = [map, oreMap];
+	let buildMap = Array(y).fill(Array(x).fill(0));
+	buildMap[Math.floor(y / 2)][Math.floor(x / 4)] = 1;
+	buildMap[Math.floor(y / 2)][Math.floor(3 * x / 4)] = 2;
+	map = [map, oreMap, buildMap];
 	return map;
 }
 
