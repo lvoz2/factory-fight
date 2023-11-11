@@ -59,7 +59,7 @@ let loc = {x: 0, y: 0};
 
 let ctx, map, assets;
 
-export function startRender(initialCtx, initialMap, initialAssets, animate) {
+export function startRender(initialCtx, initialMap, initialAssets, animate = true) {
 	ctx = initialCtx;
 	map = initialMap;
 	assets = initialAssets;
